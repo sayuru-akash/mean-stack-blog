@@ -1,12 +1,13 @@
 module.exports = function (config) {
   config.set({
-    browsers: ["ChromeHeadlessCI"],
+    browsers: ["ChromeHeadless"],
     customLaunchers: {
-      ChromeHeadlessCI: {
+      ChromeHeadless: {
         base: "ChromeHeadless",
         flags: ["--no-sandbox"],
       },
     },
+    plugins: [require("karma-chrome-launcher"), require("karma-jasmine")],
     reporters: ["progress"],
     basePath: process.cwd(),
     colors: true,
