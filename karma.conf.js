@@ -1,10 +1,12 @@
 const puppeteer = require("puppeteer");
+
 module.exports = async function (config) {
-  const browser = await puppeteer.launch({
+  await puppeteer.launch({
     headless: true,
     args: ["--no-sandbox"],
   });
   process.env.CHROME_BIN = require("puppeteer").executablePath();
+
   config.set({
     frameworks: ["mocha", "chai"],
     browsers: ["ChromeHeadless", "Chrome", "ChromeHeadlessNoSandbox"],
@@ -12,10 +14,6 @@ module.exports = async function (config) {
       ChromeHeadlessNoSandbox: {
         base: "ChromeHeadless",
         flags: ["--no-sandbox"],
-      },
-      ChromeHeadless: {
-        base: "ChromeHeadless",
-        flags: ["--no-sandbox", "--disable-gpu"],
       },
     },
     plugins: [require("karma-chrome-launcher"), require("karma-jasmine")],
