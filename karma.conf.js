@@ -1,4 +1,9 @@
-module.exports = function (config) {
+const puppeteer = require("puppeteer");
+module.exports = async function (config) {
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox"],
+  });
   process.env.CHROME_BIN = require("puppeteer").executablePath();
   config.set({
     frameworks: ["mocha", "chai"],
