@@ -1,14 +1,14 @@
-process.env.CHROME_BIN = "/usr/bin/google-chrome";
 module.exports = function (config) {
+  process.env.CHROME_BIN = require("puppeteer").executablePath();
   config.set({
     frameworks: ["mocha", "chai"],
-    browsers: ["ChromeHeadless", "Chrome", "ChromeHeadlessCI"],
+    browsers: ["ChromeHeadless", "Chrome", "ChromeHeadlessNoSandbox"],
     customLaunchers: {
-      ChromeHeadless: {
+      ChromeHeadlessNoSandbox: {
         base: "ChromeHeadless",
         flags: ["--no-sandbox"],
       },
-      ChromeHeadlessCI: {
+      ChromeHeadless: {
         base: "ChromeHeadless",
         flags: ["--no-sandbox", "--disable-gpu"],
       },
