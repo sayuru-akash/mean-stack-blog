@@ -1,0 +1,20 @@
+mat-form-field {
+  width: 100%;
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+mat-card{
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+mat-card-title {
+  color: aliceblue;
+}
+
+mat-card-header{
+  padding-left: 0.3rem;
+}

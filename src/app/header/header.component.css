@@ -1,0 +1,22 @@
+a{
+  text-decoration: none;
+  color: white;
+}
+
+ul{
+  display: flex;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+li{
+  margin: 0.3rem;
+  background-color: #333;
+  border-radius: 0.3rem;
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
