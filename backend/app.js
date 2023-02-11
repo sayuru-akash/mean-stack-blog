@@ -12,9 +12,7 @@ mongoose.set("strictQuery", false);
 
 // !! Replace the connection string with your own !!
 mongoose
-  .connect(
-    "mongodb+srv://server-admin:zB13N6JoalakWiKR@cluster0.l8oumqo.mongodb.net/angular-test?retryWrites=true&w=majority"
-  )
+  .connect("mongodb+srv://replace-with-your-connection-string")
   .then(() => {
     console.log("Connected to database!");
   })
