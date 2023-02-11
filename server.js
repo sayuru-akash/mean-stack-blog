@@ -3,23 +3,21 @@ const debug = require("debug")("node-angular");
 const http = require("http");
 const socketIO = require("socket.io");
 
-const normalizePort = val => {
+const normalizePort = (val) => {
   var port = parseInt(val, 10);
 
   if (isNaN(port)) {
-    // named pipe
     return val;
   }
 
   if (port >= 0) {
-    // port number
     return port;
   }
 
   return false;
 };
 
-const onError = error => {
+const onError = (error) => {
   if (error.syscall !== "listen") {
     throw error;
   }
@@ -56,14 +54,13 @@ server.on("error", onError);
 socketIOServer.sockets.on("connection", function (socket) {
   console.log("Client connected");
 
-  socket.on('createPost', (post) => {
-    socketIOServer.emit('createPost', post);
-    console.log('Create post socket emitted');
+  socket.on("createPost", (post) => {
+    socketIOServer.emit("createPost", post);
+    console.log("Create post socket emitted");
   });
 
-  socket.on('deletePost', (post) => {
-    socketIOServer.emit('deletePost', post);
-    console.log('Delete post socket emitted');
+  socket.on("deletePost", (post) => {
+    socketIOServer.emit("deletePost", post);
+    console.log("Delete post socket emitted");
   });
-
 });
