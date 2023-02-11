@@ -19,7 +19,7 @@
 <h3 align="center">Blog Developed with Angular and NodeJS</h3>
 
   <p align="center">
-    An simple blog application developed using the `MEAN` stack with `Angular Material` for the frontend UI.
+    An simple blog application developed using the `MEAN` stack (MongoDB, Express, Angular, NodeJS) with `Angular Material` for the frontend UI.
     <br />
     <a href="https://github.com/sayuru-akash/mean-stack-blog"><strong>Explore the project »</strong></a>
     <br />
