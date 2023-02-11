@@ -84,7 +84,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-This project is built using MATLAB. You will need to have it installed on your machine and have Statistics and Machine Learning Toolbox pre-installed in it.
+This project is built using Angular and NodeJS. You will need to have them installed on your machine and also have a running MongoDB cluster for your database, Please make sure to replace existing access string with your own DB's access string.
 
 ### Installation
 
